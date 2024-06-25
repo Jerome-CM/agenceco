@@ -1,0 +1,612 @@
+:root {
+    --background-dark: #053B44;
+    --footer-bottom:#0D2227;
+    --title:#1C2126;
+    --title-secondary:#029D5B;
+    --yellow:#D5F31F;
+    --text:#565E65;
+    --logo:#245718;
+    --background-grey-light:#F4F6F5;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("fonts/Poppins-Medium.ttf") format("ttf");
+}
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url("fonts/Poppins-Regular.ttf") format("ttf");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-100{
+    width: 100%;
+}
+.col-50{
+    width: 50%;
+}
+.col-45{
+    width: 45%;
+}
+.col-25{
+    width: 25%;
+}
+.col-33{
+    width: 33%;
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+/*** GENERAL ***/
+
+section{
+    margin: 25px 0;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.container-flex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.m10{
+    margin: 10px auto;
+}
+
+.noMarginBottom{
+    margin:auto;
+}
+
+.mt0{
+    margin-top: 0!important;
+}
+
+.mb0{
+    margin-bottom: 0!important;
+}
+
+h2{
+    color: var(--title-secondary);
+    font-size: 40px;
+}
+
+/*** NAV ***/
+
+nav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0;
+    top: 0;
+    font-weight: bold;
+    position: fixed;
+    background-color: #FFF;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+nav .logo {
+    font-size: 30px;
+    color: var(--title-secondary);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.logo span{
+    font-style: italic;
+}
+
+
+/*** homeCover ***/
+
+.homeCover{
+    width: 100%;
+}
+
+.homeCover img{
+    width: 100%;
+}
+
+.title{
+    color: white;
+    font-size: 57px;
+    position: relative;
+    top: -35vh;
+    text-align: right;
+    margin-bottom: -30vh;
+}
+
+.title span{
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 71px;
+}
+
+/*** Team ***/
+#team .card{
+    width: 150px;
+}
+
+.containerPicture{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.profilPicture{
+    width: 100%;
+    transform: scale(1.2);
+
+}
+
+#team .card span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#team .card p{
+    font-size: 12px;
+    color: var(--text);
+}
+
+/*** Numbers ***/
+
+.numbers{
+    background-color: var(--background-dark);
+    width: 100%;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.numbers .card{
+    color: #FFF;
+    font-weight: bold;
+    align-self: center;
+    margin: 17px auto;
+}
+
+.number{
+    color: var(--yellow);
+    font-weight: bold;
+    font-family: Poppins-Regular, sans-serif;
+    font-size: 25px;
+}
+
+/*** Services ****/
+
+.backgroundLogo{
+    background-color: var(--background-grey-light);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+}
+
+.backgroundLogo img{
+    padding: 30px;
+}
+
+#service h3{
+    font-family: Poppins-Regular,sans-serif;
+    font-size: 25px;
+}
+
+/*** Contact ****/
+
+
+#contact{
+    background-color: var(--background-dark);
+    color: #FFF;
+}
+
+#contact h2{
+    color:var(--yellow);
+}
+
+input[type="text"], input[type="email"]{
+    padding: 5px 0;
+    border: none;
+    border-bottom: 2px solid #FFF;
+    background: transparent;
+    margin: 15px 0;
+    color: #FFF;
+}
+
+.displaySpaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+::placeholder {
+    text-align: left;
+    color: #FFF;
+    opacity: 1;
+}
+
+textarea{
+    color: #FFF;
+    border: none;
+    border-bottom: 2px solid #FFF;
+    width: 100%;
+    height: 25vh;
+    background: transparent;
+    font-family: Poppins-Regular,sans-serif;
+    margin: 15px 0;
+}
+
+
+.right0{
+    display: flex;
+    justify-content: end;
+}
+
+
+input[type="submit"]{
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--yellow);
+    font-size: 12px;
+    padding: 10px 30px;
+}
+
+/*** about us ***/
+
+.kanban{
+    border-radius: 20px;
+    width: 100%;
+}
+
+.aboutUs{
+    border: 1px solid var(--text);
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.aboutUs h3{
+    font-family: Poppins-Regular,sans-serif;
+    font-size: 22px;
+}
+
+.aboutUs p{
+    color: var(--text);
+    font-size: 15px;
+    margin: 35px auto;
+}
+
+.justifyCenter{
+    justify-content: center!important;
+    margin-top: 15px;
+}
+.aboutUs .largeBorder{
+    width: 10vh;
+    border: 5px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.aboutUs img{
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    margin: 25%;
+}
+
+.impactWord{
+    text-wrap: nowrap;
+}
+/*** gallery ***/
+
+.wrapper{
+    margin-top: 10px;
+}
+
+.wrapper img{
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.btnActionWrapper{
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: lighter;
+    color: #000;
+}
+
+.btnActionWrapper:hover{
+    border: 1px solid black;
+    background: black;
+    color: #FFF;
+}
+
+/*** Footers ***/
+
+footer{
+    color: #FFF;
+}
+
+.firstFooter{
+    background-color: var(--background-dark);
+}
+
+.firstFooter .card{
+    text-align: left;
+    align-items: inherit;
+}
+
+.contact{
+    justify-content: space-between;
+    //*width: 200px!important; */
+}
+
+.contactMarginAndWith{
+    margin: auto auto auto 0;
+    width: 100%;
+}
+
+.contact img{
+    margin-right: 5px;
+}
+
+#phoneNumber{
+    width: 152px !important;
+}
+
+#address{
+    width: 152px !important;
+}
+
+.firstFooter img{
+    width: 40px;
+    height: 40px;
+}
+
+.secondFooter{
+    background-color: var(--footer-bottom);
+}
+
+.reseaux{
+    align-content: center;
+}
+
+.boxLogoReseau{
+    width: 30px;
+    border: 1px solid #FFF;
+    border-radius: 25%;
+    object-fit: cover;
+    padding: 4px 4px 0 4px;
+}
+
+.secondFooter img {
+    width: 15px;
+    height: 15px;
+}
+
+
+/*** Img 360 ***/
+
+iframe{
+    height: 100vh;
+    border: 0;
+    width: 101%;
+    margin: -8px;
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+
+    .col-md-100{
+        width: 100%;
+    }
+    .col-md-50{
+        width: 50%;
+    }
+
+    .col-md-45{
+        width: 45%;
+    }
+
+    .col-md-25{
+        width: 25%;
+    }
+    .col-md-33{
+        width: 33%;
+    }
+
+    .title{
+        font-size: 50px;
+        top: -27vh;
+        margin-bottom: -24vh;
+    }
+
+    .title span {
+        font-size: 53px;
+    }
+
+    .aboutUs .card{
+        display: none;
+    }
+
+    .firstFooter .card {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 870px) {
+
+    nav ul li a{
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .precoceColumn{
+        width: 100%;
+    }
+
+    .aboutUs .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .col-sm-100{
+        width: 100%!important;
+    }
+    .col-sm-50{
+        width: 50%;
+    }
+    .col-sm-25{
+        width: 25%;
+    }
+    .col-sm-33{
+        width: 33%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #FFF;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-active ul {
+        display: flex;
+    }
+
+    .displaySpaceBetween{
+        flex-wrap: wrap;
+    }
+
+    .title{
+        font-size: 35px;
+        top: -20vh;
+        margin-bottom: -18vh;
+    }
+
+    .title span{
+        font-size:40px;
+    }
+
+
+    /**** Footer ***/
+
+    .firstFooter .card {
+        text-align: inherit;
+    }
+
+    .secondFooter .displaySpaceBetween{
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+
+    h2 {
+        font-size: 33px;
+    }
+
+    .title{
+        font-size: 25px;
+        top: -14vh;
+        margin-bottom: -13vh;
+        text-align: center;
+    }
+
+    .title span{
+        font-size: 27px;
+    }
+
+    .aboutUs .card{
+        display: none;
+    }
+
+    .contact{
+        width: 84%;
+    }
+}
+
+
+
+# agenceco
+  First project of my React formation
+## Presentation
+                               It's a simple project in HTML/CSS of Web agency landingpage
