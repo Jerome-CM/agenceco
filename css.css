@@ -486,6 +486,22 @@ iframe{
         font-size: 53px;
     }
 
+    .numbers > :nth-child(3){
+        display: none;
+    }
+
+    .numbers > :nth-child(4){
+        display: none;
+    }
+
+    .firstFooter .contact{
+        flex-direction: row;
+    }
+
+    .firstFooter .contact div{
+        justify-content: center;
+    }
+
     .aboutUs .card{
         display: none;
     }
@@ -568,8 +584,21 @@ iframe{
         font-size:40px;
     }
 
+ /**** Numbers ****/
+    .numbers > :nth-child(3){
+        display: flex;
+    }
 
-    /**** Footer ***/
+    .numbers > :nth-child(4){
+        display: flex;
+    }
+
+
+    /*** Footer ***/
+
+    .firstFooter .contact{
+        flex-direction: column;
+    }
 
     .firstFooter .card {
         text-align: inherit;
