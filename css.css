@@ -163,6 +163,7 @@ nav .logo {
     top: -35vh;
     text-align: right;
     margin-bottom: -30vh;
+    margin-right: 6%;
 }
 
 .title span{
@@ -359,22 +360,37 @@ input[type="submit"]{
     overflow: hidden;
     width: 100%;
 }
-
-.btnActionWrapper{
-    width: 30px;
+.bubble{
+    width: 34px;
+    height: 33px;
     border: 1px solid black;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.bubble:hover{
+    border: 1px solid black;
+    background: black;
+    color: #FFF;
+}
+
+.btnActionWrapper{
     text-decoration: none;
     font-size: 22px;
     font-weight: lighter;
     color: #000;
 }
 
-.btnActionWrapper:hover{
-    border: 1px solid black;
-    background: black;
+.bubble:hover .btnActionWrapper{
     color: #FFF;
+}
+
+.pl-2{
+    padding-left: 2px;
+}
+
+.pr-2{
+    padding-right: 2px;
 }
 
 /*** Footers ***/
@@ -394,7 +410,6 @@ footer{
 
 .contact{
     justify-content: space-between;
-    //*width: 200px!important; */
 }
 
 .contactMarginAndWith{
@@ -621,6 +636,7 @@ iframe{
         top: -14vh;
         margin-bottom: -13vh;
         text-align: center;
+        margin-right: 0;
     }
 
     .title span{
